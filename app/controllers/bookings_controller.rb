@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_offer, only: [:show, :new, :create]
+  before_action :set_offer, only: [:new, :create]
 
   def index
     @bookings = Booking.all
@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
 
 
   def show
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -26,7 +27,7 @@ class BookingsController < ApplicationController
   private
 
   def set_offer
-    @offer = Offer.find(paramms[:offer_id])
+    @offer = Offer.find(params[:offer_id])
   end
 
   def booking_params
