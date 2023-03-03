@@ -1,6 +1,6 @@
-<%= simple_form_for[@booking, @offer] do |bk| %>
-  <%= bk.input :start_date %>
-  <%= bk.input :end_date %>
+<%= form_for[@booking, @offer] do |bk| %>
+  <%= bk.datetime :start_date %>
+  <%= bk.datetime :end_date %>
   <%= bk.submit %>
   <%=  %>
 <% end %>

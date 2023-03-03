@@ -1,5 +1,5 @@
 <ul>
 <% @bookings.each do |b| %>
-<li><%= link_to b.name, booking_path(booking) %></li>
+<li><%= button_to b.offer_id, offer_path(@offer) %></li>
 <% end %>
 </ul>
