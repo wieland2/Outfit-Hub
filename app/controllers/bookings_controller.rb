@@ -25,10 +25,11 @@ class BookingsController < ApplicationController
 
   private
 
-def set_offer
-  @offer = Offer.find(paramms[:offer_id])
-end
+  def set_offer
+    @offer = Offer.find(paramms[:offer_id])
+  end
 
   def booking_params
     params.require(:booking).permit(:user_id)
+  end
 end
