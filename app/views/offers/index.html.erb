@@ -1,10 +1,26 @@
 <h1>All Offers</h1>
 
-<ul>
+
+
+
+<div class="container">
+<div class="row">
   <% @offers.each do |offer| %>
-    <li><%= offer.title %></li>
-    <p>------------</p>
-    <p><%= offer.description %></p>
-    <p><%= offer.price %></p>
+    <div class="col-4">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= offer.title %></h5>
+          <p class="card-text"><%= offer.description %></p>
+          <p class="card-text"><%= offer.price %></p>
+          <a href="#" class="btn btn-primary">Rent</a>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
+</div>
+
+
+
+<%= link_to "Add", new_offer_path(@offer) %>
