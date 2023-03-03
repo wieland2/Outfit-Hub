@@ -12,3 +12,5 @@
   offer_path(@offer),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this offer?"}
 %>
+<%= link_to "Edit", edit_offer_path(@offer) %>
+<%= link_to "Return to offers", offers_path%>
