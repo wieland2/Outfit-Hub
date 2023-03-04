@@ -1,3 +1,9 @@
-<%= @booking.start_date %>
-<%= @booking.end_date %>
-<%= @booking.price_total %>
+
+<p><%= link_to "Bookings", bookings_path %></p>
+
+<ul>
+<p><%= @booking.offer.title %></p>
+<p><%= @booking.start_date %></p>
+<p><%= @booking.end_date %></p>
+<p><%= @booking.price_total %></p>
+<ul>

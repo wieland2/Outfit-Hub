@@ -1,5 +1,7 @@
+<h2>My bookings</h2>
+<p> <%= link_to "Offers", offers_path %></p>
 <ul>
-<% @bookings.each do |b| %>
-<li><%= link_to b.offer.title, booking_path(b.id) %></li>
+<% @bookings.each do |booking| %>
+<li><%= link_to booking.offer.title, booking_path(booking.id) %></li>
 <% end %>
 </ul>
