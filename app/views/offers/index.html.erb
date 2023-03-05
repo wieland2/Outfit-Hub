@@ -1,10 +1,96 @@
 <h1> Rent The Fit! </h1>
 <p><%= link_to "My bookings", bookings_path %></p>
+
+
+<div class="cards">
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
 <ul>
-  <% @offers.each do |offer| %>
-    <li><%= link_to offer.title, offer_path(offer)%></li>
-    <p>------------</p>
-    <p><%= offer.description %></p>
-    <p>$<%= offer.price %></p>
-  <% end %>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
 </ul>
+</div>
+ <% end %>
+</div>
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
+<ul>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
+</ul>
+</div>
+ <% end %>
+</div>
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
+<ul>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
+</ul>
+</div>
+ <% end %>
+</div>
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
+<ul>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
+</ul>
+</div>
+ <% end %>
+</div>
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
+<ul>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
+</ul>
+</div>
+ <% end %>
+</div>
+<div class="card">
+<% @offers.each do |offer| %>
+<div class="card-img">
+<img src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+</div>
+<div class="card-text">
+<ul>
+  <p><%= offer.title %></p>
+  <p><%= offer.description %></p>
+  <p>$<%= offer.price %></p>
+  <p><%= offer.size %></p>
+</ul>
+</div>
+ <% end %>
+</div>
+</div>
