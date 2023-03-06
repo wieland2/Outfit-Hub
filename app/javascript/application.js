@@ -4,8 +4,3 @@ import "./controllers"
 import "bootstrap"
 
 // In your application.js (for example)
-
-
-
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
