@@ -1,5 +1,4 @@
-<h1> Rent The Fit! </h1>
-
+<div class="search-bar-flex">
 <div class="search-bar">
   <%= form_with url: offers_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -10,10 +9,11 @@
   <%= submit_tag "Search", class: "fa-light fa-magnifying-glass" %>
 <% end %>
 </div>
+</div>
 
 <div class="cards">
 <% @offers.each do |offer| %>
-<div class="card">
+<div class="card-container">
 <div class="card-img">
 <%= link_to offer_path(offer) do %>
 <%= cl_image_tag (offer.photo.key).to_s, height: 250, width: 300, crop: :fill, :effect=>"improve" %>
@@ -21,7 +21,7 @@
 </div>
 <div class="card-text">
  <p class="index-card-text">$<%= offer.price%></p>
- <p><%= offer.size%></p>
+ <p class="index-card-text-2"><%= offer.size%></p>
 </div>
 </div>
  <% end %>

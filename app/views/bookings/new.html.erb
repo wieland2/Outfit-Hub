@@ -1,12 +1,14 @@
 
-<div class="booking-offer-grid">
+<div class="booking-offer-flex">
 
+<div class="new-booking-form">
 <%= simple_form_for [@offer, @booking] do |f| %>
   <%= f.input :start_date, as: :date, start_year: Date.today.year,
                               end_date: Date.today.year + 1,
                               order: [:day, :month, :year] %>
   <%= f.submit wrapper_html: { class: 'submit' } %>
 <% end %>
+</div>
 
 
 <div class="offer-container">
