@@ -1,9 +1,5 @@
 <ul>
 <% @bookings.each do |b| %>
-<<<<<<< HEAD
-<li><%= button_to b.offer_id, offer_path(@offer) %></li>
-=======
 <li><%= link_to b.offer.title, booking_path(b.id) %></li>
->>>>>>> 852077c1c093bc2665cad6d11fbb9f688b68710c
 <% end %>
 </ul>

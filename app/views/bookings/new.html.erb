@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<%= form_for[@booking, @offer] do |bk| %>
-  <%= bk.datetime :start_date %>
-  <%= bk.datetime :end_date %>
-=======
 <%= simple_form_for[@booking, @offer] do |bk| %>
   <%= bk.input :start_date %>
 
   <%= bk.input :end_date %>
 
->>>>>>> 852077c1c093bc2665cad6d11fbb9f688b68710c
   <%= bk.submit %>
 <% end %>
