@@ -1,10 +1,19 @@
-<h1>All Offers</h1>
+<h1> Rent The Fit! </h1>
 
-<ul>
-  <% @offers.each do |offer| %>
-    <li><%= offer.title %></li>
-    <p>------------</p>
-    <p><%= offer.description %></p>
-    <p><%= offer.price %></p>
-  <% end %>
-</ul>
+
+
+<div class="cards">
+<% @offers.each do |offer| %>
+<div class="card">
+<div class="card-img">
+<%= link_to offer_path(offer) do %>
+<%= cl_image_tag (offer.photo.key).to_s, height: 250, width: 300, crop: :fill, :effect=>"improve" %>
+<% end %>
+</div>
+<div class="card-text">
+ <p class="index-card-text">$<%= offer.price%></p>
+ <p><%= offer.size%></p>
+</div>
+</div>
+ <% end %>
+</div>

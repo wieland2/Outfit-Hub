@@ -1,3 +1,18 @@
-.navbar {
-  background: red;
+
+
+.offers-link {
+text-decoration: none;
+color: black;
+}
+
+.navbar-lewagon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: whitesmoke;
+  height: 80px;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }

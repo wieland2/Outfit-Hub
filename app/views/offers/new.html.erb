@@ -1,18 +1,10 @@
 <h1>Create a new Offer</h1>
 
-<%= form_for @offer do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-
-<%= f.label :description %>
-<%= f.text_field :description %>
-
-<%= f.label :price %>
-<%= f.number_field :price %>
-
-<%= f.label :size %>
-<%= f.select :size, ['S', 'M', 'L', 'XL', 'XXL'] %>
-
-<%= f.submit %>
-
+<%= simple_form_for @offer do |f| %>
+  <%= f.input :title%>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :size %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
 <% end %>

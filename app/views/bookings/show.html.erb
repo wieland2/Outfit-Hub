@@ -1,3 +1,34 @@
-<%= @booking.start_date %>
-<%= @booking.end_date %>
-<%= @booking.price_total %>
+
+<p><%= link_to "Bookings", bookings_path %></p>
+
+
+
+
+<div class="card-booking">
+<div class="card-img">
+<%= cl_image_tag (@booking.offer.photo.key).to_s, height: 300, width: 400, crop: :fill %>
+</div>
+<div class="card-text-booking">
+<p><%= @booking.offer.title %></p>
+<div class="flex-card-booking">
+<p>Price</p>
+ <p class="index-card-text">$<%= @booking.offer.price%></p>
+</div>
+<div class="flex-card-booking">
+<p>Size</p>
+ <p class="index-card-text"><%= @booking.offer.size%></p>
+</div>
+<div class="flex-card-booking">
+<p>Start Date</p>
+ <p class="index-card-text"><%= @booking.start_date%></p>
+</div>
+<div class="flex-card-booking">
+<p>End Date</p>
+ <p class="index-card-text"><%= @booking.end_date%></p>
+</div>
+<div class="flex-card-booking">
+<p>Total Amount</p>
+ <p class="index-card-text">$<%= @booking.price_total%></p>
+</div>
+</div>
+</div>

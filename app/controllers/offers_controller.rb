@@ -14,6 +14,7 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
+    @offer.user = current_user
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -33,8 +34,9 @@ class OffersController < ApplicationController
   end
 
   def destroy
+    @offer.user = current_user
     @offer.destroy
-    redirect_to offers_path, status: :see_ther
+    redirect_to offers_path, status: :see_other
   end
 
   private
@@ -44,6 +46,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :price, :description, :user_id, :size)
+    params.require(:offer).permit(:title, :price, :description, :user_id, :size, :photo)
   end
 end
