@@ -27,6 +27,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.user = current_user
+    @booking.destroy
+    redirect_to offers_path(@booking.offer), status: :see_other
+  end
+
   private
 
   def set_offer
