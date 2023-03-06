@@ -2,9 +2,12 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @offers = Offer.all
-    skip_authorization
-    @offers = policy_scope(Offer)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
   end
 
   def show

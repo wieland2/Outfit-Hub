@@ -4,7 +4,27 @@
   <%= f.input :title%>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.input :size %>
+  <%= f.select :size, options_for_select(["Select Size", "S", "M", "L", "XL", "XLL"],:disabled => ["Select Size"]) %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
+
+<div class="offer-container">
+<div class="offer-img-container">
+<%= cl_image_tag (@offer.photo.key).to_s, height: 500, width: 500, crop: :fill %>
+</div>
+<div class="offer-text-container">
+<h2 class="offer-text"><%= @offer.title %></h2>
+<div class="flex-card-booking">
+<p>Price</p>
+ <p class="offer-card-text">$<%= @offer.price%></p>
+</div>
+<p class= "offer-line-break">________________________________________________</p>
+<div class="flex-card-booking">
+<p>Size</p>
+ <p class="offer-card-text"><%= @offer.size%></p>
+</div>
+<p class="offer-line-break">________________________________________________</p>
+<p class="offer-text-description"><%= @offer.description %></p>
+</div>
+</div>
