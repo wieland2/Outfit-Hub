@@ -11,15 +11,18 @@ class OffersController < ApplicationController
   end
 
   def show
+    authorize @offer
   end
 
   def new
     @offer = Offer.new
+    authorize @offer
   end
 
   def create
     @offer = Offer.new(offer_params)
     @offer.user = current_user
+    authorize @offer
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -28,9 +31,11 @@ class OffersController < ApplicationController
   end
 
   def edit
+    authorize @offer
   end
 
   def update
+    authorize @offer
     if @offer.update(offer_params)
       redirect_to offer_path(@offer)
     else
@@ -39,6 +44,7 @@ class OffersController < ApplicationController
   end
 
   def destroy
+    authorize @offer
     @offer.user = current_user
     @offer.destroy
     redirect_to offers_path, status: :see_other
@@ -47,10 +53,12 @@ class OffersController < ApplicationController
   private
 
   def set_offer
+    skip_authorization
     @offer = Offer.find(params[:id])
   end
 
   def offer_params
+    skip_authorization
     params.require(:offer).permit(:title, :price, :description, :user_id, :size, :photo)
   end
 end
