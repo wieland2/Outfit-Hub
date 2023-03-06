@@ -4,7 +4,7 @@
   <%= f.input :title%>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.input :size %>
+  <%= f.select :size, options_for_select(["Select Size", "S", "M", "L", "XL", "XLL"],:disabled => ["Select Size"]) %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>

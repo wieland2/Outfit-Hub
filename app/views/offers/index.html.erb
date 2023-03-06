@@ -1,13 +1,13 @@
 <h1> Rent The Fit! </h1>
 
-<div class="search">
+<div class="search-bar">
   <%= form_with url: offers_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control me-2",
     placeholder: "Find a OutFit"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "fa-light fa-magnifying-glass" %>
 <% end %>
 </div>
 
