@@ -5,15 +5,23 @@
 </div>
 <div class="offer-text-container">
 <h2 class="offer-text"><%= @offer.title %></h2>
-<p class="offer-text">Price &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp $<%= @offer.price %> </p>
-<p>________________________________________________</p>
-<p class="offer-text">Size &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @offer.size %></p>
-<p>________________________________________________</p>
+<div class="flex-card-booking">
+<p>Price</p>
+ <p class="offer-card-text">$<%= @offer.price%></p>
+</div>
+<p class= "offer-line-break">________________________________________________</p>
+<div class="flex-card-booking">
+<p>Size</p>
+ <p class="offer-card-text"><%= @offer.size%></p>
+</div>
+<p class="offer-line-break">________________________________________________</p>
 <p class="offer-text-description"><%= @offer.description %></p>
 </div>
 <div class="offer-buttons-container">
 <div>
-<button class="add-button-1"> Rent </button>
+<%= link_to new_offer_booking_path(@offer.id) do %>
+<button class="add-button-1"> Rent</button>
+<% end %>
 </div>
 <div>
 <button class="add-button-2"> Add to cart </button>

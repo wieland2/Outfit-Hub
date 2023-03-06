@@ -17,6 +17,10 @@ display: flex;
 justify-content: space-between;
 }
 
+.offer-card-text {
+font-weight: bold;
+}
+
 .index-card-text {
 font-weight: bold;
 margin-left: 10px;
@@ -29,6 +33,7 @@ margin-left: 100px;
 
 .offer-text-container {
 margin-left: 50px;
+width: 300px;
 }
 
 .add-button-1 {
@@ -67,4 +72,16 @@ width: 400px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+
+.offer-line-break {
+width: 300px;
+}
+
+.booking-offer-grid {
+display: flex;
+}
+
+.submit {
+background-color: black;
 }
