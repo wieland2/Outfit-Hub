@@ -1,0 +1,15 @@
+<div class="cards">
+  <% @offers.sample(4).each do |offer| %>
+    <div class="card">
+      <div class="card-img">
+        <%= link_to offer_path(offer) do %>
+        <%= cl_image_tag (offer.photo.key).to_s, height: 250, width: 300, crop: :fill, :effect=>"improve" %>
+        <% end %>
+      </div>
+        <div class="card-text">
+        <p class="index-card-text">$<%= offer.price%></p>
+        <p><%= offer.size%></p>
+        </div>
+    </div>
+  <% end %>
+</div>
