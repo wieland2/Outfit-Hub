@@ -10,11 +10,30 @@ user_2= User.create(email: "ruda@hotmail.com", password: "123456")
 user_3 = User.create(email: "marcelo@hotmail.com", password: "123456")
 user_4 = User.create(email: "wagner@hotmail.com", password: "123456")
 
-offer_1 = Offer.create(title: "Jeans", price: 35.0, description: "Blue Washed Jeans", size: "M", user_id: 1)
-offer_2 = Offer.create(title: "Black Dress", price: 25.0, description: "Nice Black Dress", size: "S", user_id: 1)
-offer_3 = Offer.create(title: "White Top", price: 5.0, description: "White Tank Top", size: "M", user_id: 2)
-offer_4 = Offer.create(title: "Suit", price: 40.0, description: "Black Suit", size: "L", user_id: 3)
-offer_5 = Offer.create(title: "Shirt", price: 40.0, description: "Blue Polo Shirt", size: "P", user_id: 4)
 
-booking_1 = Booking.create(price_total: 105.0, start_date: Date.new(2023, 5, 23) , end_date: Date.new(2023, 5, 25), user_id: 1, offer_id: 1)
-booking_1 = Booking.create(price_total: 50.0 , start_date: Date.new(2023, 5, 23) , end_date: Date.new(2023, 5, 24), user_id: 1, offer_id: 2)
+
+
+require "open-uri"
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047472/Outfits/P0_fmtxcv.jpg")
+offer_1 = Offer.new(title: "Jeans", price: 5.0, description: "Blue Washed Jeans", size: "M", user_id: 1)
+offer_1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+offer_1.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047218/Outfits/P0_z5s1jq.jpg")
+offer_2 = Offer.new(title: "Sweater Vest", price: 5.0, description: "Sweater Vest in blue and white stripes with a touch of red", size: "M", user_id: 1)
+offer_2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+offer_2.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047433/Outfits/P0_wxlmno.jpg")
+offer_3 = Offer.new(title: "Pink Curdoray Jacket", price: 15.0, description: "Pink Jacket", size: "M", user_id: 2)
+offer_3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+offer_3.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047391/Outfits/P0_kvobvb.jpg")
+offer_4 = Offer.new(title: "Hat", price: 2.0, description: "Navy Hat", size: "M", user_id: 3)
+offer_4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+offer_4.save
+
+booking_1 = Booking.create(price_total: 10.0, start_date: Date.new(2023, 5, 23) , end_date: Date.new(2023, 5, 25), user_id: 1, offer_id: 1)
+booking_1 = Booking.create(price_total: 5.0 , start_date: Date.new(2023, 5, 23) , end_date: Date.new(2023, 5, 24), user_id: 1, offer_id: 2)
