@@ -1,6 +1,15 @@
 <h1> Rent The Fit! </h1>
 
-
+<div class="search">
+  <%= form_with url: offers_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a OutFit"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+</div>
 
 <div class="cards">
 <% @offers.each do |offer| %>
