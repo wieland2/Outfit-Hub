@@ -3,8 +3,67 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 row-gap: 20px;
 column-gap: 20px;
+border-style: none;
 }
 
-.img-size {
-width: 200px;
+.card {
+width: 300px;
+border-style: none;
+}
+
+.card-text {
+display: flex;
+justify-content: space-between;
+}
+
+.index-card-text {
+font-weight: bold;
+margin-left: 10px;
+}
+
+.offer-container {
+display: flex;
+margin-left: 100px;
+}
+
+.offer-text-container {
+margin-left: 50px;
+}
+
+.add-button-1 {
+width: 280px;
+background-color: rgb(38, 38, 38);
+color: white;
+font-size: 20px;
+font-weight: bold;
+}
+
+.add-button-2 {
+width: 280px;
+margin-top: 40px;
+background-color: rgb(38, 38, 38);
+color: white;
+font-size: 20px;
+font-weight: bold;
+}
+
+.offer-buttons-container {
+margin-right: 10px;
+margin-left: 100px;
+}
+
+.card-booking {
+width: 500px;
+margin-left: 200px;
+margin-right: 200px;
+}
+
+.card-text-booking {
+width: 400px;
+}
+
+.flex-card-booking {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }

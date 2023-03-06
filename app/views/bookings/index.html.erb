@@ -1,7 +1,19 @@
 <h2>My bookings</h2>
 <p> <%= link_to "Offers", offers_path %></p>
-<ul>
+
+
+<div class="cards">
 <% @bookings.each do |booking| %>
-<li><%= link_to booking.offer.title, booking_path(booking.id) %></li>
+<div class="card">
+<div class="card-img">
+<%= link_to booking_path(booking.id) do %>
+<%= cl_image_tag (booking.offer.photo.key).to_s, height: 250, width: 300, crop: :fill, :effect=>"improve" %>
 <% end %>
-</ul>
+</div>
+<div class="card-text">
+ <p class="index-card-text">$<%= booking.offer.price%></p>
+ <p><%= booking.offer.size%></p>
+</div>
+</div>
+<% end %>
+</div>

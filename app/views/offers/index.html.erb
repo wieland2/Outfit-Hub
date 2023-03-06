@@ -1,20 +1,19 @@
 <h1> Rent The Fit! </h1>
-<p><%= link_to "My bookings", bookings_path %></p>
+
 
 
 <div class="cards">
 <% @offers.each do |offer| %>
 <div class="card">
 <div class="card-img">
-<img class="img-size" src="https://media-photos.depop.com/b1/18397671/1458707411_32634faa1e8a412fa94d3e5ad5abda8a/P0.jpg">
+<%= link_to offer_path(offer) do %>
+<%= cl_image_tag (offer.photo.key).to_s, height: 250, width: 300, crop: :fill, :effect=>"improve" %>
+<% end %>
 </div>
 <div class="card-text">
-<ul>
-  <p><%= offer.title %></p>
-  <p><%= offer.description %></p>
-  <p>$<%= offer.price %></p>
-  <p><%= offer.size %></p>
-</ul>
+ <p class="index-card-text">$<%= offer.price%></p>
+ <p><%= offer.size%></p>
 </div>
 </div>
  <% end %>
+</div>
