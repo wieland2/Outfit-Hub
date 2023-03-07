@@ -4,14 +4,13 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 row-gap: 20px;
 column-gap: 20px;
 border-style: none;
-margin-top: 50px;
 margin-left: 50px;
 margin-right: 50px;
+margin-top: 100px;
 }
 
 .card-container {
-width: 300px;
-border-color: red;
+width: 300px
 }
 
 .card-text {
@@ -26,16 +25,14 @@ font-weight: bold;
 .index-card-text {
 font-weight: bold;
 margin-left: 7px;
+margin-top: 6px;
 }
 
 .index-card-text-2 {
   font-weight: bold;
   margin-right: 7px;
+  margin-top: 6px;
   }
-.offer-container {
-display: flex;
-margin-left: 100px;
-}
 
 .offer-text-container {
 margin-left: 50px;
@@ -44,10 +41,16 @@ width: 300px;
 
 .add-button-1 {
 width: 280px;
-background-color: rgb(38, 38, 38);
-color: white;
+background-color: white;
+color:  rgb(38, 38, 38);
 font-size: 20px;
 font-weight: bold;
+}
+
+.add-button-1:hover {
+color: white;
+background-color:rgb(38, 38, 38);
+transition: 1s;
 }
 
 .add-button-2 {
@@ -58,6 +61,12 @@ color: white;
 font-size: 20px;
 font-weight: bold;
 }
+
+.add-button-2:hover {
+  color: rgb(38, 38, 38);
+  background-color: white;
+  transition: 1s;
+  }
 
 .offer-buttons-container {
 margin-right: 10px;
@@ -78,6 +87,9 @@ width: 400px;
 display: flex;
 justify-content: space-between;
 align-items: baseline;
+border-bottom-style: solid;
+border-bottom-width: thin;
+border-bottom-color: gray;
 }
 
 .offer-line-break {
@@ -86,19 +98,24 @@ width: 300px;
 
 .booking-offer-flex {
 display: flex;
+margin-top: 100px;
+justify-content: space-between;
+margin-left: 50px;
+margin-right: 50px;
 }
+
+.offer-container {
+display: inline-block;
+flex-direction: column;
+}
+
 
 .submit {
 background-color: black;
 }
 
-.search-bar {
-width: 500px;
-}
-
-.search-bar-flex {
-display: flex;
-justify-content: center;
+.offer-text-show-container {
+width: 250px;
 }
 
 
@@ -107,10 +124,95 @@ width: 500px;
 justify-content: center;
 }
 
-.new-booking-form {
-border: solid;
-}
 
 .offer-inline-new {
 display: inline-block;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 60;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  margin: 10px;
+  width: 300px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-button {
+text-decoration: none;
+background-color: black;
+color: whitesmoke;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 10px;
+}
+
+
+.search-button {
+background-color: rgb(0, 0, 0);
+color: white;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 10px;
+padding-left: 10px;
+border-radius: 15px;
+font-weight: bold;
+}
+
+.search-bar {
+width: 500px;
+border-radius: 230px;
+}
+
+.search-bar-box {
+display: flex;
+margin-top: 30px;
+align-items: center;
+justify-content: center;
+}
+
+
+.new-offer-form-button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+
+.new-offer-title {
+color: gray;
+text-align: center;
+}
+
+.new-offer-div-container {
+margin-left: 300px;
+margin-right: 300px;
+margin-top: 50px;
+width: 400px
+}
+
+.booking-title {
+margin-bottom: 20px;
+text-align: center;
 }
