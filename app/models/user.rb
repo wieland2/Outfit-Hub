@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many  :offers
          has_many  :bookings
+         validates :username, presence: true, length: {maximum: 10}
+         has_one_attached :photo
 end

@@ -5,15 +5,31 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-user_1= User.create(email: "antonio@hotmail.com", password: "123456")
-user_2= User.create(email: "ruda@hotmail.com", password: "123456")
-user_3 = User.create(email: "marcelo@hotmail.com", password: "123456")
-user_4 = User.create(email: "wagner@hotmail.com", password: "123456")
-
-
-
-
 require "open-uri"
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678189957/66577_nmfhwf.jpg")
+user_1= User.new(email: "antonio@hotmail.com", password: "123456", username: "antonio", city: "Zurich, Switzerland", age: 25)
+user_1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user_1.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678189957/66577_nmfhwf.jpg")
+user_2= User.new(email: "ruda@hotmail.com", password: "123456", username: "ruda",  city: "Rio de Janeiro, Brazil", age: 25)
+user_2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user_2.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678189957/66577_nmfhwf.jpg")
+user_3= User.new(email: "antonio@hotmail.com", password: "123456", username: "antonio", city: "Zurich, Switzerland", age: 25)
+user_3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user_3.save
+
+file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678189957/66577_nmfhwf.jpg")
+user_4= User.new(email: "wagner@hotmail.com", password: "123456", username: "wagner", city: "Rio de Janeiro, Brazil", age: 24)
+user_4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user_4.save
+
+
+
+
 
 file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047472/Outfits/P0_fmtxcv.jpg")
 offer_1 = Offer.new(title: "Jeans", category: "Trousers", price: 5.0, description: "Blue Washed Jeans", size: "M", user_id: 1)
