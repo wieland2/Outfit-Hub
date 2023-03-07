@@ -1,0 +1,22 @@
+
+<div claass="user-card">
+<div class="user-information-div">
+<%= link_to user_path(@user)do %>
+<%= cl_image_tag (@user.photo.key).to_s, height: 200, width:  40, crop: :fill %>
+<% end %>
+<%= @user.username %>
+<%= @user.age %>
+<%= @user.city %>
+</div>
+<div>
+<% @user.offers.each do |offer| %>
+<%= cl_image_tag (offer.photo.key).to_s, height: 250, width: 300, crop: :fill %>
+<%= offer.price %>
+<%= offer.size %>
+<%= offer.description %>
+<%= offer.category %>
+<% end %>
+</div>
+</div>
+
+<%= link_to "Edit", edit_user_path(@user) %>

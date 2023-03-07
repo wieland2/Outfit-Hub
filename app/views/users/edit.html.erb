@@ -1,0 +1,7 @@
+<%= simple_form_for @user do |f| %>
+  <%= f.input :username%>
+  <%= f.input :age %>
+  <%= f.input :city %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

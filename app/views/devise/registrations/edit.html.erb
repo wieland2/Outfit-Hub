@@ -14,6 +14,12 @@
                 hint: "leave it blank if you don't want to change it",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :age,
+                required: false,
+                input_html: { autocomplete: "age" } %>
+    <%= f.input :city,
+                required: false,
+                input_html: { autocomplete: "city" } %>
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
