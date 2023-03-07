@@ -16,22 +16,22 @@ user_4 = User.create(email: "wagner@hotmail.com", password: "123456")
 require "open-uri"
 
 file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047472/Outfits/P0_fmtxcv.jpg")
-offer_1 = Offer.new(title: "Jeans", price: 5.0, description: "Blue Washed Jeans", size: "M", user_id: 1)
+offer_1 = Offer.new(title: "Jeans", category: "Trousers", price: 5.0, description: "Blue Washed Jeans", size: "M", user_id: 1)
 offer_1.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 offer_1.save
 
 file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047218/Outfits/P0_z5s1jq.jpg")
-offer_2 = Offer.new(title: "Sweater Vest", price: 5.0, description: "Sweater Vest in blue and white stripes with a touch of red", size: "M", user_id: 1)
+offer_2 = Offer.new(title: "Sweater Vest", category: "Jumper", price: 5.0, description: "Sweater Vest in blue and white stripes with a touch of red", size: "M", user_id: 1)
 offer_2.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 offer_2.save
 
 file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047433/Outfits/P0_wxlmno.jpg")
-offer_3 = Offer.new(title: "Pink Curdoray Jacket", price: 15.0, description: "Pink Jacket", size: "M", user_id: 2)
+offer_3 = Offer.new(title: "Pink Curdoray Jacket", category: "Jacket", price: 15.0, description: "Pink Jacket", size: "M", user_id: 2)
 offer_3.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 offer_3.save
 
 file = URI.open("https://res.cloudinary.com/djbdn9bdv/image/upload/v1678047391/Outfits/P0_kvobvb.jpg")
-offer_4 = Offer.new(title: "Hat", price: 2.0, description: "Navy Hat", size: "M", user_id: 3)
+offer_4 = Offer.new(title: "Hat", price: 2.0, category: "Hat", description: "Navy Hat", size: "M", user_id: 3)
 offer_4.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 offer_4.save
 

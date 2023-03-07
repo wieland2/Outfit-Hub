@@ -59,6 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_05_194803) do
     t.float "price"
     t.text "description"
     t.string "size"
+    t.string "category"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

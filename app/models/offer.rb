@@ -2,7 +2,7 @@ class Offer < ApplicationRecord
   belongs_to :user
   has_many :bookings
   has_one_attached :photo
-  validates :title, :price, :description, :size, presence: true
+  validates :title, :price, :description, :size, :category, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_title_and_description,

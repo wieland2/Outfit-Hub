@@ -5,6 +5,7 @@ class CreateOffers < ActiveRecord::Migration[7.0]
       t.float :price
       t.text :description
       t.string :size
+      t.string :category
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
