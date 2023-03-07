@@ -5,6 +5,17 @@
 
 
 <div class="card-booking">
+    <div class="offer-user-div-content">
+      <div class="offer-avatar-image">
+        <%= link_to user_path(@booking.user)do %>
+        <%= cl_image_tag (@booking.offer.user.photo.key).to_s, height: 50, width:  50, crop: :fill, :radius => "max", :gravity => "face" %>
+        <% end %>
+      </div>
+    <div class="offer-user-text">
+      <p class="offer-user-text-p"><%= @booking.offer.user.username %></p>
+      <p><%= @booking.offer.user.city %></p>
+    </div>
+  </div>
 <div class="card-img">
 <%= cl_image_tag (@booking.offer.photo.key).to_s, height: 300, width: 400, crop: :fill %>
 </div>

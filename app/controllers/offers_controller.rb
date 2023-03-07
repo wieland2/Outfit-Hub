@@ -59,6 +59,6 @@ class OffersController < ApplicationController
 
   def offer_params
     skip_authorization
-    params.require(:offer).permit(:title, :price, :description, :user_id, :size, :photo)
+    params.require(:offer).permit(:title, :price, :description, :user_id, :size, :photo, :category)
   end
 end

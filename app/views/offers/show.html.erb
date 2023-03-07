@@ -1,16 +1,26 @@
-
 <div class="booking-offer-flex">
-<div class="offer-img-container">
-<%= cl_image_tag (@offer.photo.key).to_s, height: 500, width: 500, crop: :fill %>
-</div>
-<div class="offer-text-show-container">
-<h2 class="offer-text"><%= @offer.title %></h2>
+  <div class="offer-img-container">
+    <%= cl_image_tag (@offer.photo.key).to_s, height: 500, width: 500, crop: :fill %>
+  </div>
+  <div class="offer-text-show-container">
+    <h2 class="offer-text"><%= @offer.title %></h2>
+    <div class="offer-user-div-content">
+      <div class="offer-avatar-image">
+        <%= link_to user_path(@offer.user)do %>
+        <%= cl_image_tag (@offer.user.photo.key).to_s, height: 50, width:  50, crop: :fill, :radius => "max", :gravity => "face" %>
+        <% end %>
+      </div>
+    <div class="offer-user-text">
+      <p class="offer-user-text-p"><%= @offer.user.username %></p>
+      <p><%= @offer.user.city %></p>
+    </div>
+  </div>
 <div class="flex-card-booking">
-<p>Price</p>
-<p class="offer-card-text">$<%= @offer.price%></p>
+  <p>Price</p>
+  <p class="offer-card-text">$<%= @offer.price%></p>
 </div>
 <div class="flex-card-booking">
-<p>Size</p>
+  <p>Size</p>
  <p class="offer-card-text"><%= @offer.size%></p>
 </div>
 <div class="flex-card-booking">
@@ -18,15 +28,10 @@
  <p class="offer-card-text"><%= @offer.category%></p>
 </div>
 <p class="offer-text-description"><%= @offer.description %></p>
-</div>
-<div class="offer-buttons-container">
-<div>
-<%= link_to new_offer_booking_path(@offer.id) do %>
-<button class="add-button-1">Rent</button>
-<% end %>
-</div>
-<div>
-<button class="add-button-2">Add to cart</button>
-</div>
+
+<div class="button-offer-div">
+  <%= link_to new_offer_booking_path(@offer.id) do %>
+  <button class="add-button-1">Rent</button>
+  <% end %>
 </div>
 </div>
